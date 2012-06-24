@@ -1,0 +1,7 @@
+This is the repository for the contents of udpxy.com website;
+it is kept separate from the application's source code on purpose.
+
+Website contents are not usually needed by non-website developers
+and no source code is present on the website, so it makes sense to
+store and download them separately.
+
