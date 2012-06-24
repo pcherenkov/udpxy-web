@@ -33,10 +33,27 @@ p {
     text-align: justify;
 }
 
+a.langswitch {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    font-size: small;
+}
+
+a.langswitch:visited {
+    color: #101020;
+    text-decoration:underline;
+}
+
+a.langswitch:link {
+    color: #f0f0e0;
+    text-decoration:underline;
+}
+
 #navmenu {
     position: absolute;
     top: 20px;
-    left: 970px;
+    left: 950px;
     width: 90px;
     padding-right: 10px;
     background-image: url("images/msep2.png");
