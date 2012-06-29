@@ -45,7 +45,7 @@
             <p>Check your compiler, if it's not the default <kbd>cc</kbd>, prepend <kbd>make</kbd> with CC=<i>your_compiler</i>. For instance, if <kbd>clang</kbd> is not the default C compiler but you do wish to build with it, run:</p>
             <p><kbd>CC=clang make</kbd> <i>[{target}]</i></p>
 
-            <p>The available <kbd>make</kbd> targets make up for combinations of size and feature sets:
+            <p>The available <kbd>make</kbd> targets make up for combinations of size and debug feature sets:
             <table>
                 <tbody>
                     <tr style="font-size: 0.8em"><td width="100px" height="40px">Target:</td><td>has asserts:</td><td>has debug symbols:</td><td>has verbose mode:</td></tr>
@@ -58,7 +58,7 @@
             </table>
 
             <p>Running <kbd>make</kbd> without specifying a target will build the <b>release</b> version of udpxy.</p>
-            <p>Once <kbd>make</kbd> has succeeded, the resulting <i>udpxy</i> executable file could be
+            <p>Once <kbd>make</kbd> has succeeded, the resulting <i>udpxy</i> and <i>udpxrec</i> executable file could be
                 copied to a location of one's choice and run from there - no additional
                 installation steps are required.
             </p>

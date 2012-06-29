@@ -38,22 +38,31 @@
         </div> <!-- navmenu -->
         <div id="content">
             <div id="howto-txt">
-            <h3>How to build and install udpxy using GNU gcc compiler:</h3>
-            <p>Untar the *.tgz source distribution into a directory of your choice by running:</p>
+            <h3>Сборка и установка udpxy с помощью gcc или Clang компилятора:</h3>
+            <p>Разархивировать исходный код из файла *.tgz в директорию по выбору с помощью команды:</p>
             <kbd>tar -xzvf udpxy.X.Y-ZZ.tgz or gzip -dc udpxy.X.Y-ZZ.tgz | tar -xvf -</kbd>
-            <p> Make sure that <kbd>GNU make</kbd> (<kbd>gmake</kbd> under BSD) and <kbd>gcc (version &gt;=3.x)</kbd> are available.</p>
+            <p>Убедитесь в наличии  <kbd>GNU make</kbd> (<kbd>gmake</kbd> в BSD-системах).</p>
 
-            <p><kbd>make</kbd> targets are:
-            <ul>
-                <li><b>debug</b>: include asserts, debug symbols, verbose mode available;</li>
-                <li><b>release</b>: no asserts, no debug symbols, verbose mode available;</li>
-                <li><b>lean</b>: the smallest size, no asserts, no debug symbols, no verbose mode;</li>
-            </ul>
+            <p>Если нужный компилятор не совпадает с <kbd>cc</kbd>, используемым по умолчанию в системе, добавьте префикс к <kbd>make</kbd> в виле CC=<i>your_compiler</i>. К примеру, если <kbd>clang</kbd> не является C компилятором по умолчанию, но следует использовать именно его, выполните:</p>
+            <p><kbd>CC=clang make</kbd> <i>режим</i></p>
 
-            <p>Running <kbd>make</kbd> without specifying a target will build the <b>release</b> version of udpxy.</p>
-            <p>Once <kbd>make</kbd> has succeeded, the resulting <i>udpxy</i> executable file could be
-                copied to a location of one's choice and run from there - no additional
-                installation steps are required.</p>
+            <p>Для <kbd>make</kbd> доступны режимы, комбинирующие результирующий размер модулей и опции отладки:</p>
+            <table>
+                <tbody>
+                    <tr style="font-size: 0.8em"><td width="100px" height="40px">Режим:</td><td>есть asserts:</td><td>есть debug символы:</td><td>есть режим verbose:</td></tr>
+                    <tr><td><i>debug</i></td><td>YES</td><td>YES</td><td>YES</td></tr>
+                    <tr><td><i>release</i></td><td>NO</td><td>NO</td><td>YES</td></tr>
+                    <tr><td><i>lean</i></td><td>NO</td><td>NO</td><td>NO</td></tr>
+                    <tr><td><i>rdebug</i></td><td>NO</td><td>YES</td><td>YES</td></tr>
+                    <tr><td><i>ldebug</i></td><td>NO</td><td>YES</td><td>NO</td></tr>
+                </tbody>
+            </table>
+
+            <p>Запуск <kbd>make</kbd> без указания режима выберет режим <b>release</b> для сборки udpxy.</p>
+            <p>После успешного окончания работы <kbd>make</kbd>, исполняемые модули <i>udpxy</i> могут быть вручную скопированы
+                в выбранную Вами диркторию и в дальнейшем запускаться оттуда - никаких дополнительных шагов не требуется.</p>
+            <p>Можно также выполнить команду <kbd>make install</kbd> для инсталяции исполняемых модулей <i>udpxy</i> в директорию
+                <kbd>/usr/local/bin</kbd>.</p>
             </div> <!-- howto-txt -->
             <div id="footer">
                 <p>Copyright &copy; 2012 Pavel V. Cherenkov</p>
