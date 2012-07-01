@@ -51,6 +51,13 @@ a.langswitch:link {
     text-decoration:underline;
 }
 
+#download {
+    position: absolute;
+    top: 80px;
+    left: 25px;
+    font-size: small;
+}
+
 #navmenu {
     position: absolute;
     top: 20px;
