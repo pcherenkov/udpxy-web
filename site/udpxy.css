@@ -189,6 +189,12 @@ kdb {
 }
 
 
+#download-txt h3 {
+    color: #603030;
+    font-weight: 1.5em;
+    font-family: sans-serif;
+}
+
 #features {
     margin-right: 25px;
 }
@@ -208,6 +214,38 @@ kdb {
     color: #202070;
     font-weight: 1.5em;
     font-family: sans-serif;
+}
+
+#download-tbl {
+    margin: 0px 20px 0px 0px;
+    border-collapse: collapse;
+    /* border: 1px solid grey; */
+}
+
+.dwl-tblhdr td {
+    /*border-right: 1px solid black;*/
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    background-color: #484F4F;
+    color: #F0F0E0;
+}
+
+.dwl-titem {
+    background-color: #EAEAEA;
+    font-size: 1em;
+}
+
+.dwl-titem td {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px dashed black;
+    padding-left: 10px;
+}
+
+.latest-build {
+    background-color: white;
+    color: #205020;
+    font-weight: 1.5em;
 }
 
 
